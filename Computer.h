@@ -11,6 +11,7 @@ class Computer : public Player{
     public:
     string name =" Computer";
     char hand;
+    Computer();
     virtual char makeMove();
     virtual string getName();
 };

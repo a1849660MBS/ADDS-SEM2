@@ -8,12 +8,12 @@
 using namespace std;
 
 int main(){
-    Human *a1("Marwan");
-    Human *a2("Tom");
+    Human a1;
+    Human a2;
 
-    Referee ref();
+    Referee ref;
 
-    ref.reGame(a1,a2);
+    ref.refGame(a1,a2);
 
     return 0;
 }

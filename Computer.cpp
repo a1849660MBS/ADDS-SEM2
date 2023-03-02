@@ -10,6 +10,9 @@ char Computer::makeMove(){
     return hand;
 }
 
+Computer::Computer(){
+    
+}
 string Computer:: getName(){
 
     return name;

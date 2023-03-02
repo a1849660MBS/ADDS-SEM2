@@ -6,8 +6,9 @@
 
 class Human: public Player{
     public:
-    string name = "Human";
+    string name = " ";
     char hand;
+    Human();
     Human(string inName);
     virtual char makeMove();
     virtual string getName();
