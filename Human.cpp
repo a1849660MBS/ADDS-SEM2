@@ -4,20 +4,25 @@
 
 using namespace std;
 
-Human::Human(string inName){
+Human::Human(string inName)
+{
     name = inName;
 }
+Human::Human()
+{
+    name = "Human";
+}
 
-char Human::makeMove(){
-    cout<< "Enter Move: ";
+char Human::makeMove()
+{
+    cout << "Enter Move: ";
     cout << endl;
-    cin>> hand;
+    cin >> hand;
 
     return hand;
 }
 
-string Human::getName(){
+string Human::getName()
+{
     return name;
 }
-
-
