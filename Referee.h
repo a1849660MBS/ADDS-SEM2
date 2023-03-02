@@ -4,8 +4,6 @@
 #include <iostream>
 #include <string>
 #include "Player.cpp"
-#include "Human.cpp"
-#include "Computer.cpp"
 
 class Referee {
 public:

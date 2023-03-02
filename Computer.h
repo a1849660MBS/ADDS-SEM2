@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include "Player.cpp"
+#include "Human.cpp"
 
 using namespace std;
 

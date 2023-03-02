@@ -1,19 +1,19 @@
 #include <iostream>
 #include <string>
-#include "Human.cpp"
-#include "Player.cpp"
-#include "Computer.cpp"
-#include "Referee.cpp"
+#include "Computer.h"
+#include "Referee.h"
 
 using namespace std;
 
 int main(){
-    Human a1;
-    Human a2;
-
+    Human a;
+    Human b;
     Referee ref;
 
-    ref.refGame(a1,a2);
+    Human * pointer1 = &a;
+    Human * pointer2 = &b;
+
+    ref.refGame(pointer1,pointer2);
 
     return 0;
 }
