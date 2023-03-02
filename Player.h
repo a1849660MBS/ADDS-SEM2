@@ -8,9 +8,9 @@ using namespace std;
 class Player{
     public:
     string name = " ";
-    string hand;
+    char hand;
     virtual char makeMove()=0; 
-    string getName();
+    virtual string getName()=0;
 };
 
 

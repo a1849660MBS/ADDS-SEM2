@@ -6,7 +6,12 @@
 
 class Human: public Player{
     public:
-     virtual char makeMove();
+    string name = "Human";
+    char hand;
+    Human(string inName);
+    virtual char makeMove();
+    virtual string getName();
+
 };
 
 
