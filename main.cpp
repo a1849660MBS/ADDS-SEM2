@@ -7,13 +7,11 @@ using namespace std;
 
 int main(){
     Human a;
-    Human b;
+    Computer b;
     Referee ref;
 
-    Human * pointer1 = &a;
-    Human * pointer2 = &b;
 
-    ref.refGame(pointer1,pointer2);
+    ref.refGame(a,b);
 
     return 0;
 }
