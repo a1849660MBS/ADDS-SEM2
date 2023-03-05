@@ -16,13 +16,15 @@ Player * Referee::refGame(Player *player1, Player *player2){
     char move2= player2->makeMove();
 
     if(move1 == move2){
-        cout<< "Its a draw!" << endl;
+        //cout<< "Its a draw!" << endl;
         return nullptr;
     } else if (move1 == 'P'){
-        cout<< player1->getName() << "Wins" << endl;
+        //cout<< player1->getName() << "Wins" << endl;
         return player1;
     } else if (move1 == 'S'){
-        cout<< player2->getName() << "Wins" << endl;
+        //cout<< player2->getName() << "Wins" << endl;
         return player2;
     }
+
+    return nullptr;
 }

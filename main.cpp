@@ -10,8 +10,10 @@ int main(){
     Computer b;
     Referee ref;
 
+    Human * pointer1 = &a;
+    Computer * pointer2 = &b;
 
-    ref.refGame(a,b);
+    ref.refGame(pointer1,pointer2);
 
     return 0;
 }
