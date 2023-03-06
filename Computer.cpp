@@ -5,13 +5,13 @@
 using namespace std;
 
 char Computer::makeMove(){
-    hand = 'R';
+    move = 'R';
 
-    return hand;
+    return move;
 }
 
 Computer::Computer(){
-    
+
 }
 string Computer:: getName(){
 

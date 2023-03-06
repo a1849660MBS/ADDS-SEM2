@@ -2,6 +2,8 @@
 #include <string>
 #include "Computer.h"
 #include "Referee.h"
+#include "Player.h"
+#include "Human.h"
 
 using namespace std;
 

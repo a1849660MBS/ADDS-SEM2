@@ -4,10 +4,7 @@
 
 using namespace std;
 
-Human::Human(string inName)
-{
-    name = inName;
-}
+
 Human::Human()
 {
     name = "Human";
@@ -17,9 +14,10 @@ char Human::makeMove()
 {
     cout << "Enter Move: ";
     cout << endl;
-    cin >> hand;
+    cin >> move;
 
-    return hand;
+    return move;
+
 }
 
 string Human::getName()
