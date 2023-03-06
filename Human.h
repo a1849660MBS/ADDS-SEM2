@@ -5,13 +5,13 @@
 #include "Player.h"
 
 class Human: public Player{
-    public:
-    string name = " ";
-    char hand;
+public:
     Human();
-    Human(string inName);
-    virtual char makeMove();
-    virtual string getName();
+    char makeMove();
+    std::string getName();
+
+    std::string name;
+    char move;
 
 };
 

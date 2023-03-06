@@ -3,17 +3,17 @@
 
 #include <iostream>
 #include <string>
-#include "Human.cpp"
+#include "player.h"
 
 using namespace std;
 
 class Computer : public Player{
     public:
-    string name =" Computer";
-    char hand;
+    std::string name =" Computer";
+    char move;
     Computer();
-    virtual char makeMove();
-    virtual string getName();
+    char makeMove();
+    std::string getName();
 };
 
 #endif
