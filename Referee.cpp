@@ -15,17 +15,14 @@ Player * Referee::refGame(Player *player1, Player *player2){
     Move* move2 =  player2->makeMove();
 
     //draw scenario
-    if(move1 == move2){
+    if(move1->getName() == move2->getName()){
         //cout<< "Its a draw!" << endl;
         return nullptr;
-    }
-
-
-    //if it finds it in move 1 but not 2, player 1 wins, else player 2 wins
-
-    if(find(move1->beatingMoves.begin(),move1->beatingMoves.end(), move1->getName()) != move2->beatingMoves.end()){
+    }else if(find(move1->beatingMoves.begin(),move1->beatingMoves.end(), move1->getName()) != move2->beatingMoves.end()){
+        //cout<<"Player 1 wins"<< endl;
         return player1;
-    } else{
+    } else if(find(move2->beatingMoves.begin(),move2->beatingMoves.end(), move2->getName()) != move1->beatingMoves.end()){
+        //cout<<"Player 2 wins"<< endl;
         return player2;
     }
 
