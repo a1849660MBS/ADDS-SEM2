@@ -14,15 +14,18 @@ Player * Referee::refGame(Player *player1, Player *player2){
     Move* move1 =  player1->makeMove();
     Move* move2 =  player2->makeMove();
 
+    //cout<< move1->getName() << endl;
     //draw scenario
     if(move1->getName() == move2->getName()){
         //cout<< "Its a draw!" << endl;
         return nullptr;
-    }else if(find(move1->beatingMoves.begin(),move1->beatingMoves.end(), move1->getName()) != move2->beatingMoves.end()){
-        //cout<<"Player 1 wins"<< endl;
+    }
+    
+    if(binary_search(move2->beatingMoves.begin(),move2->beatingMoves.end(), move1->getName())){
+        cout<<"Player 1 wins"<< endl;
         return player1;
-    } else if(find(move2->beatingMoves.begin(),move2->beatingMoves.end(), move2->getName()) != move1->beatingMoves.end()){
-        //cout<<"Player 2 wins"<< endl;
+    } else{
+        cout<<"Player 2 wins"<< endl;
         return player2;
     }
 
