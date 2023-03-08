@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Move* Computer::makeMove(){
+char Computer::makeMove(){
     move = 'R';
 
     return move;

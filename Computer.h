@@ -12,7 +12,7 @@ class Computer : public Player{
     std::string name =" Computer";
     char move;
     Computer();
-    Move* makeMove();
+    char makeMove();
     std::string getName();
 };
 

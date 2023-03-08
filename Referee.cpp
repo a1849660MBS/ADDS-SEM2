@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Referee.h"
-
+#include "Move.h"
 using namespace std;
 
 Referee::Referee(){
@@ -12,8 +12,8 @@ Player * Referee::refGame(Player *player1, Player *player2){
 
     cout<< player1->getName()<< " Plays against " << player2->getName() << endl;
 
-    char move1 =  player1->makeMove();
-    char move2 =  player2->makeMove();
+    Move* move1 =  player1->makeMove();
+    Move* move2 =  player2->makeMove();
 
     if(move1 == move2){
         //cout<< "Its a draw!" << endl;
