@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <string>
+#include<algorithm>
 #include "Referee.h"
 #include "Move.h"
 using namespace std;
@@ -20,8 +21,13 @@ Player * Referee::refGame(Player *player1, Player *player2){
     }
 
 
-    // finds the winning moves
-    
+    //if it finds it in move 1 but not 2, player 1 wins, else player 2 wins
+
+    if(find(move1->beatingMoves.begin(),move1->beatingMoves.end(), move1->getName()) != move2->beatingMoves.end()){
+        return player1;
+    } else{
+        return player2;
+    }
 
     return nullptr;
 }

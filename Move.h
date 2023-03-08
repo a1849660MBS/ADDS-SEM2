@@ -9,6 +9,7 @@
 class Move{
     public:
     std::vector<std::string>beatingMoves;
+   
    //std::vector<std::string>losingMoves;
     std::string moveName;
 
