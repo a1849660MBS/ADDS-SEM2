@@ -1,19 +1,17 @@
-#ifndef PAPER_H
-#define PAPER_H
+#ifndef ZOMBIE_H
+#define ZOMBIE_H
 
 #include <iostream>
 #include <string>
 #include <vector>
-
-
 #include "Move.h"
 
-
-class Paper : public Move{
+class Zombie: public Move{
     public:
-    Paper();
-    void setBeats();
-};
+    Zombie();
 
+    void setBeats();
+
+};
 
 #endif

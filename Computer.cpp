@@ -4,8 +4,9 @@
 
 using namespace std;
 
-char Computer::makeMove(){
-    move = 'R';
+Move* Computer::makeMove(){
+    Move* move;
+    move = new Rock();
 
     return move;
 }

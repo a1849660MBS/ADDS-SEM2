@@ -1,5 +1,5 @@
 #ifndef SCISSORS_H
-#define SCISSORS_
+#define SCISSORS_H
 
 #include <iostream>
 #include <vector>
@@ -9,6 +9,8 @@
 
 class Scissors: public Move
 {
+
+public:
     Scissors();
 
     void setBeats();

@@ -1,19 +1,16 @@
-#ifndef PAPER_H
-#define PAPER_H
+#ifndef MONKEY_H
+#define MONKEY_H
 
 #include <iostream>
 #include <string>
 #include <vector>
-
-
 #include "Move.h"
 
-
-class Paper : public Move{
+class Monkey : public Move{
     public:
-    Paper();
+    Monkey();
+
     void setBeats();
 };
-
 
 #endif

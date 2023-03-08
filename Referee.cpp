@@ -10,21 +10,18 @@ Referee::Referee(){
 }
 Player * Referee::refGame(Player *player1, Player *player2){
 
-    cout<< player1->getName()<< " Plays against " << player2->getName() << endl;
-
     Move* move1 =  player1->makeMove();
     Move* move2 =  player2->makeMove();
 
+    //draw scenario
     if(move1 == move2){
         //cout<< "Its a draw!" << endl;
         return nullptr;
-    } else if (move1 == 'P'){
-        //cout<< player1->getName() << "Wins" << endl;
-        return player1;
-    } else if (move1 == 'S'){
-        //cout<< player2->getName() << "Wins" << endl;
-        return player2;
     }
+
+
+    // finds the winning moves
+    
 
     return nullptr;
 }

@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include "Player.h"
-
+#include "Rock.h"
 using namespace std;
 
 class Computer : public Player{
@@ -12,7 +12,7 @@ class Computer : public Player{
     std::string name =" Computer";
     char move;
     Computer();
-    char makeMove();
+    Move* makeMove();
     std::string getName();
 };
 

@@ -1,19 +1,17 @@
-#ifndef PAPER_H
-#define PAPER_H
+#ifndef ROBOT_H
+#define ROBOT_H
 
 #include <iostream>
 #include <string>
 #include <vector>
-
-
 #include "Move.h"
 
 
-class Paper : public Move{
+class Robot : public Move{
     public:
-    Paper();
+    Robot();
+
     void setBeats();
 };
-
 
 #endif
