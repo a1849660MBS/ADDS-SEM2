@@ -17,6 +17,10 @@ Human::Human()
     name = "Human";
 }
 
+Human::Human(std::string inputName){
+    inputName = name;
+}
+
 Move *Human::makeMove()
 {
     cout << "Enter Move: ";

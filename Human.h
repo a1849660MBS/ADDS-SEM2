@@ -7,6 +7,7 @@
 class Human: public Player{
 public:
     Human();
+    Human(std::string inputName);
     Move* makeMove();
     std::string getName();
 
