@@ -20,17 +20,14 @@ Player *Referee::refGame(Player *player1, Player *player2)
 
     if (move1->getName() == move2->getName())
     {
-        cout << "Its a draw!" << endl;
         return nullptr;
     }
     if (std::find(move2->beatingMoves.begin(), move2->beatingMoves.end(), move1->getName()) == move2->beatingMoves.end())
     {
-        cout << "Player 1 wins" << endl;
         return player1;
     }
-    else if (std::find(move2->beatingMoves.begin(), move2->beatingMoves.end(), move1->getName()) != move2->beatingMoves.end())
+    if (std::find(move2->beatingMoves.begin(), move2->beatingMoves.end(), move1->getName()) != move2->beatingMoves.end())
     {
-        cout << "Player 2 wins" << endl;
         return player2;
     }
 
