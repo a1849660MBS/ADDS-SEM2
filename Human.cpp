@@ -10,21 +10,21 @@
 #include "Robot.h"
 #include "Pirate.h"
 #include "Ninja.h"
-using namespace std;
+//using namespace std;
 
-Human::Human()
+Human::Human(std::string in){
+    Objname= in;
+}
+std::string Human::getName()
 {
-    Objname = "Human";
+    return Objname;
 }
 
-Human::Human(std::string inputName){
-    inputName = Objname;
-}
 
 Move *Human::makeMove()
 {
 
-    cin >> move;
+    std::cin >> move;
 
     if (move == "Rock")
     {
@@ -60,9 +60,4 @@ Move *Human::makeMove()
     }
 
     return nullptr;
-}
-
-string Human::getName()
-{
-    return Objname;
 }

@@ -6,8 +6,8 @@
 
 class Human: public Player{
 public:
-    Human();
-    Human(std::string inputName);
+    
+    Human(std::string in);
     Move* makeMove();
     std::string getName();
 
