@@ -9,6 +9,7 @@ using namespace std;
 Referee::Referee()
 {
 }
+
 Player *Referee::refGame(Player *player1, Player *player2)
 {
 
@@ -16,12 +17,14 @@ Player *Referee::refGame(Player *player1, Player *player2)
     Move *move2 = player2->makeMove();
 
    if(move1 == move2){
-     return nullptr;
+    return nullptr;
    }else if(move1->getName() == "Paper"){
     return player1;
-   } else if(move1->getName() == "Scissors"){
+   }else if(move1->getName() == "Scissors"){
     return player2;
    }
 
     return nullptr;
 }
+
+
