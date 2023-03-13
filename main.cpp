@@ -14,7 +14,7 @@ int main(){
 
     Human * pointer1 = &a;
     Computer * pointer2 = &b;
-    cout<< pointer1->getName()<< " Plays against " << pointer2->getName() << endl;
+    //cout<< pointer1->getName()<< " Plays against " << pointer2->getName() << endl;
 
     ref.refGame(pointer1,pointer2);
 
