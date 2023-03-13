@@ -23,8 +23,7 @@ Human::Human(std::string inputName){
 
 Move *Human::makeMove()
 {
-    cout << "Enter Move: ";
-    cout << endl;
+
     cin >> move;
 
     if (move == "Rock")
