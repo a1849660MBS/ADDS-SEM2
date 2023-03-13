@@ -9,8 +9,8 @@ using namespace std;
 
 class Computer : public Player{
     public:
-    std::string name =" Computer";
-    char move;
+    std::string name ="Computer";
+    
     Computer();
     Move* makeMove();
     std::string getName();

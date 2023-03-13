@@ -4,11 +4,11 @@
 #include <string>
 #include "Move.h"
 
-using namespace std;
+//using namespace std;
 
 class Player{
     public:
-    string name = " ";
+    std::string name = " ";
     virtual Move* makeMove()=0; 
     virtual string getName()=0;
 };
