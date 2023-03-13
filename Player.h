@@ -8,7 +8,7 @@
 
 class Player{
     public:
-    std::string name = " ";
+    std::string Objname;
     virtual Move* makeMove()=0; 
     virtual std::string getName()=0;
 };

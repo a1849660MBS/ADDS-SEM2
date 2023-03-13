@@ -12,9 +12,9 @@ Move* Computer::makeMove(){
 }
 
 Computer::Computer(){
-
+ Objname = "Computer";
 }
-string Computer:: getName(){
+string Computer::getName(){
 
-    return name;
+    return Objname;
 }

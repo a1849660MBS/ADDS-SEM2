@@ -11,7 +11,7 @@ public:
     Move* makeMove();
     std::string getName();
 
-    std::string name;
+    std::string Objname;
     std::string move;
 
 };

@@ -14,11 +14,11 @@ using namespace std;
 
 Human::Human()
 {
-    name = "Human";
+    Objname = "Human";
 }
 
 Human::Human(std::string inputName){
-    inputName = name;
+    inputName = Objname;
 }
 
 Move *Human::makeMove()
@@ -64,5 +64,5 @@ Move *Human::makeMove()
 
 string Human::getName()
 {
-    return name;
+    return Objname;
 }

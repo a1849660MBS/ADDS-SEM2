@@ -5,11 +5,11 @@
 #include <string>
 #include "Player.h"
 #include "Rock.h"
-using namespace std;
+//using namespace std;
 
 class Computer : public Player{
     public:
-    std::string name ="Computer";
+    std::string Objname ="Computer";
     
     Computer();
     Move* makeMove();
