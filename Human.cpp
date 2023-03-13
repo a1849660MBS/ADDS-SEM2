@@ -12,6 +12,9 @@
 #include "Ninja.h"
 //using namespace std;
 
+Human::Human(){
+    Objname = "Human";
+}
 Human::Human(std::string in){
     Objname= in;
 }
