@@ -1,34 +1,36 @@
 #include "Finder.h"
-
+#include <string>
 using namespace std;
 vector<int> Finder::findSubstrings(string s1, string s2) {
-
     vector<int> result;
-
-    result.reserve(s2.size());
-
-    int s2_size = s2.size();
-
-    string s2_substr;
-
-    for (int i = 0; i <= s2_size; i++) {
-
-        s2_substr = s2.substr(0, i);
-
-       int found = s1.find(s2_substr);
-
-        if (found != string::npos) {
-
-            result.emplace_back(found);
-
-        } else {
-
-            result.emplace_back(-1);
-
-        }
-
+    int m = s1.size();
+    int n = s2.size();
+    if (n > m) {
+        return result;
     }
-
+    // Create prefix table
+    vector<int> pi(n);
+    for (int i = 1, j = 0; i < n; i++) {
+        while (j > 0 && s2[i] != s2[j]) {
+            j = pi[j-1];
+        }
+        if (s2[i] == s2[j]) {
+            j++;
+        }
+        pi[i] = j;
+    }
+    // Search for s2 in s1
+    for (int i = 0, j = 0; i < m; i++) {
+        while (j > 0 && s1[i] != s2[j]) {
+            j = pi[j-1];
+        }
+        if (s1[i] == s2[j]) {
+            j++;
+        }
+        if (j == n) {
+            result.push_back(i - n + 1);
+            j = pi[j-1];
+        }
+    }
     return result;
-
 }
