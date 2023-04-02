@@ -28,7 +28,7 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
             j++;
         }
         if (j == n) {
-            result.push_back(i - n + 1); // fix indexing here
+            result.push_back(i - n); // fix indexing here
             j = pi[j-1];
         }
     }
