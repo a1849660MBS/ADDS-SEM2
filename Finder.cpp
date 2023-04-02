@@ -28,16 +28,8 @@ vector<int> Finder::findSubstrings(string s1, string s2) {
             j++;
         }
         if (j == n) {
-            result.push_back(i - n + 1);
+            result.push_back(i - n + 1); // fix indexing here
             j = pi[j-1];
-        }
-    }
-    // Add -1 for missing substrings
-    if (result.empty()) {
-        result.push_back(-1);
-    } else {
-        while (result.size() < n) {
-            result.push_back(-1);
         }
     }
     return result;
