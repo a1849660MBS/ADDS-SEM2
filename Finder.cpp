@@ -5,12 +5,13 @@ vector<int> result;
 size_t start = 0;
 while (start <= s1.size()) {
 size_t found = s1.find(s2, start);
+
 if (found != string::npos) {
 result.push_back(found);
 start = found + 1;
 } else {
 result.push_back(-1);
-break;
+start++;
 }
 }
 return result;
