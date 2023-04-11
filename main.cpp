@@ -26,7 +26,7 @@ int main(){
 
    
     std::vector<int> sorted_v = b.sort(v);
-    if( z.search(v,1)){
+    if(z.search(v,1) == 1){
     std::cout << "true ";
     for (int i = 0; i < sorted_v.size(); i++) {
         std::cout << sorted_v[i] << " ";
@@ -34,7 +34,7 @@ int main(){
     std::cout << std::endl;
     } 
     
-    if(!(z.search(v,1))){
+    if(z.search(v,1) == 0){
     std::cout << "false ";
     for (int i = 0; i < sorted_v.size(); i++) {
         std::cout << sorted_v[i] << " ";

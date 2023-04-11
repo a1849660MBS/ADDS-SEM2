@@ -11,9 +11,6 @@ bool RecursiveBinarySearch::search(std::vector<int> list, int element)
 
 bool RecursiveBinarySearch::binary_search(std::vector<int>& list, int element, int start, int end){
         
-        if (start > end) {
-            return false;
-        }
         int mid = (start + end) / 2;
         if (list[mid] == element) {
             return true;
