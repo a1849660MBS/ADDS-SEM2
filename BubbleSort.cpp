@@ -6,24 +6,19 @@
 using namespace std;
 vector<int> BubbleSort::sort(vector<int> list){
  // loop to access each array element
-
- size_t size = list.size();
-  for (int step = 0; step < size; ++step) {
-      
-    // loop to compare array elements
-    for (int i = 0; i < size - step; ++i) {
-
-      // compare two adjacent elements
-      // change > to < to sort in descending order
-      if (list[i] > list[i + 1]) {
-
-        // swapping elements if elements
-        // are not in the intended order
-        int temp = list[i];
-        list[i] = list[i + 1];
-        list[i + 1] = temp;
-      }
-    }
-  }
-    return list;
+   int n = list.size();
+    // Traverse through all elements in the vector
+    for (int i = 0; i < n; i++) {
+        // Last i elements are already sorted
+        for (int j = 0; j < n-i-1; j++) {
+            // Traverse the vector from 0 to n-i-1
+            // Swap if the element found is greater than the next element
+            if (list[j] > list[j+1]) {
+                int temp = list[j];
+                list[j] = list[j+1];
+                list[j+1] = temp;
+            }
+        }
+}
+return list;
 }
