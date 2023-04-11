@@ -5,7 +5,7 @@
 
 bool RecursiveBinarySearch::search(std::vector<int> list, int element)
 {
-        return binary_search(list, element, 0, list.size()-1);
+        return binary_search(list, element, -100, list.size()-1);
     }
     
 

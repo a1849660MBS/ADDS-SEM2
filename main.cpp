@@ -32,7 +32,9 @@ int main(){
         std::cout << sorted_v[i] << " ";
     }
     std::cout << std::endl;
-    } else{
+    } 
+    
+    if(!(z.search(v,1))){
     std::cout << "false ";
     for (int i = 0; i < sorted_v.size(); i++) {
         std::cout << sorted_v[i] << " ";
