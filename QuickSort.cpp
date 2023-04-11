@@ -28,7 +28,8 @@
 
     }
     int QuickSort::partition(std::vector<int>& list, int low, int high){
-         int pivot = list[high];
+    
+    int pivot = list[high];
     int i = low - 1;
     for (int j = low; j < high; j++) {
         if (list[j] < pivot) {
@@ -39,6 +40,7 @@
     swap(list[i+1], list[high]);
     return i+1;
     }
+
     void QuickSort::swap(int& a, int& b){
     int temp = a;
     a = b;

@@ -3,14 +3,17 @@
 #include "RecursiveBinarySearch.h"
 
 
-bool RecursiveBinarySearch::search(std::vector<int> list, int element)
+bool RecursiveBinarySearch::search(std::vector<int> & list, int element)
 {
-        return binary_search(list, element, -100, list.size()-1);
+        return binary_search(list, element, 0, list.size()-1);
     }
     
 
-bool RecursiveBinarySearch::binary_search(std::vector<int>& list, int element, int start, int end){
+bool RecursiveBinarySearch::binary_search(std::vector<int> & list, int element, int start, int end){
         
+        if (start > end) {
+            return false;
+        }
         int mid = (start + end) / 2;
         if (list[mid] == element) {
             return true;

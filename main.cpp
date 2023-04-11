@@ -9,7 +9,6 @@
 
 int main(){
 
-    BubbleSort a;
     QuickSort b;
     RecursiveBinarySearch z;
 
@@ -26,22 +25,22 @@ int main(){
 
    
     std::vector<int> sorted_v = b.sort(v);
-    if(z.search(v,1) == 1){
+
+
+    if( z.search(sorted_v,1)){
     std::cout << "true ";
     for (int i = 0; i < sorted_v.size(); i++) {
         std::cout << sorted_v[i] << " ";
     }
     std::cout << std::endl;
-    } 
-    
-    if(z.search(v,1) == 0){
+    } else{
     std::cout << "false ";
     for (int i = 0; i < sorted_v.size(); i++) {
         std::cout << sorted_v[i] << " ";
     }
     std::cout << std::endl; 
     }
-   
+
 
     return 0;
 }
