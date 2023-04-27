@@ -1,7 +1,7 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
-#include "node.h"
+#include "Node.h"
 
 class LinkedList {
     private:
@@ -19,7 +19,7 @@ public:
 
 
     int get(int pos);
-    
+
 
      // create a new node with an int of data at the index'th position of the list; inserting out of bounds does nothing
     void insertPosition(int item, unsigned int index);
