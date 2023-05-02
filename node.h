@@ -3,22 +3,16 @@
 
 class Node {
 
-private:
-    int data;
-    Node* link;
-
 public:
-    Node(int, Node*);
-
-    Node(int a);
-
-    int getData() const;
-
-    void setData(int Data);
-
-    Node* getLink() const;
-
-    void setLink(Node *link);
+    private:
+        int data;
+        Node* link;
+    public:
+        Node(int data);
+        void setData(int data);
+        void setLink(Node* link);
+        int getData();
+        Node* getLink();
 
 };
 

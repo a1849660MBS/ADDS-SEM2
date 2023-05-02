@@ -1,14 +1,11 @@
 #include "Node.h"
 
-Node::Node(int data, Node* link) {
+Node::Node(int data) {
     this->data = data;
     this->link = link;
 }
-Node::Node(int a){
-this ->data = a;
 
-}
-int Node::getData() const{
+int Node::getData() {
     return data;
 }
 
@@ -16,7 +13,7 @@ int Node::getData() const{
         this->data = Data;
     }
 
-    Node* Node::getLink() const{
+    Node* Node::getLink(){
         return link;
     }
 

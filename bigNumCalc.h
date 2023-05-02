@@ -5,11 +5,12 @@
 #include<list>
 
 
-class bigNumCalc {
+class BigNumCalc {
 
+    
     public:
-    bigNumCalc();
-    ~bigNumCalc();
+    BigNumCalc();
+    ~BigNumCalc();
 
 
     //the methods
@@ -21,7 +22,10 @@ class bigNumCalc {
     std::list<int> sub(std::list<int> num1, std::list<int> num2);
 
     std::list<int> mul(std::list<int> num1, std::list<int> num2);
+
+
 };
+
 
 
 #endif
