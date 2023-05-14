@@ -5,7 +5,7 @@
  using namespace std;
 
     TrieNode::TrieNode() {
-        children =  std::vector<TrieNode*>(MAX_NODE, nullptr);
+        children =  vector<TrieNode*>(MAX_NODE, nullptr);
         isEndOfWord = false;
     }
 
