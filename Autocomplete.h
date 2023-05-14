@@ -20,7 +20,7 @@ private:
     
     void insertHelper(TrieNode* node, std::string word);
     
-    void getSuggestionsHelper(TrieNode* node, std::string partialWord, std::vector<string>& suggestions);
+    void getSuggestionsHelper(TrieNode* node, std::string partialWord, std::vector<std::string>& suggestions);
     
     
 public:
