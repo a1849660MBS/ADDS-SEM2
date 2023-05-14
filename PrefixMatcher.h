@@ -8,21 +8,21 @@
 
 const int MAX_NODE = 2;
 
-class TrieNode {
+class TrieNodes {
 public:
-    TrieNode* children[MAX_NODE];
+    TrieNodes* children[MAX_NODE];
     int routerNumber;
     
-    TrieNode();
+    TrieNodes();
 };
 
 class PrefixMatcher {
 private:
-    TrieNode* root;
+    TrieNodes* root;
     
-    void insertHelper(TrieNode* node, std::string address, int routerNumber);
+    void insertHelper(TrieNodes* node, std::string address, int routerNumber);
     
-    int selectRouterHelper(TrieNode* node, std::string address);
+    int selectRouterHelper(TrieNodes* node, std::string address);
     
 public:
     PrefixMatcher();

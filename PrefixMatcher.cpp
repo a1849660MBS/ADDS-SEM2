@@ -6,18 +6,18 @@
 
 using namespace std;
 
-TrieNode::TrieNode() {
+TrieNodes::TrieNodes() {
         for (int i = 0; i < MAX_NODE; i++) {
             children[i] = nullptr;
         }
         routerNumber = -1;
     }
 
-void PrefixMatcher::insertHelper(TrieNode* node, string address, int routerNumber) {
+void PrefixMatcher::insertHelper(TrieNodes* node, string address, int routerNumber) {
         for (char c : address) {
             int index = c - '0';
             if (node->children[index] == nullptr) {
-                node->children[index] = new TrieNode();
+                node->children[index] = new TrieNodes();
             }
             node = node->children[index];
         }
@@ -25,7 +25,7 @@ void PrefixMatcher::insertHelper(TrieNode* node, string address, int routerNumbe
     }
 
 
-    int  PrefixMatcher::selectRouterHelper(TrieNode* node, string address) {
+    int  PrefixMatcher::selectRouterHelper(TrieNodes* node, string address) {
         int routerNumber = node->routerNumber;
         for (char c : address) {
             int index = c - '0';
@@ -42,7 +42,7 @@ void PrefixMatcher::insertHelper(TrieNode* node, string address, int routerNumbe
 
 
     PrefixMatcher::PrefixMatcher() {
-        root = new TrieNode();
+        root = new TrieNodes();
     }
 
         void PrefixMatcher::insert(string address, int routerNumber) {
